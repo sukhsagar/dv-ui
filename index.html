@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Vacuums | Canadian-Owned Vacuum Specialists</title>
+  <meta name="description" content="Expertly selected vacuums for every home, workspace and cleaning challenge. Authorized vacuum sales, service and repairs in Calgary and across Canada.">
+  
+  <!-- Google Fonts: Manrope (Only font as requested) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Utility Bar: Social Icons & Offer Carousel Only -->
+  <aside class="top-bar" aria-label="Social Links & Special Offers">
+    <div class="container top-bar__inner">
+      <!-- Left: Social Icons -->
+      <div class="top-bar__socials" aria-label="Social media channels">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="top-bar__social-link" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="top-bar__social-link" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="top-bar__social-link" aria-label="YouTube">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#2a0809"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: Offer Carousel -->
+      <div class="top-bar__offers" aria-label="Special Offers Carousel">
+        <div class="offers-track" id="offersTrack">
+          <div class="offer-slide active">
+            <span class="offer-tag">FREE SHIPPING</span>
+            <span>Free Express Delivery Across Canada on Orders Over $75</span>
+          </div>
+          <div class="offer-slide">
+            <span class="offer-tag">PRICE MATCH</span>
+            <span>100% Price Match Guarantee on Authorized Canadian Dealers</span>
+          </div>
+          <div class="offer-slide">
+            <span class="offer-tag">WARRANTY CENTRE</span>
+            <span>Certified Warranty Service: Dyson, Miele, SEBO &amp; Duovac</span>
+          </div>
+          <div class="offer-slide">
+            <span class="offer-tag">CALGARY SHOWROOM</span>
+            <span>In-Store Testing &amp; Free Diagnostic Estimates — Open Mon–Sat</span>
+          </div>
+        </div>
+        <div class="offers-nav">
+          <button class="offer-arrow prev" aria-label="Previous offer" onclick="prevOffer()">‹</button>
+          <button class="offer-arrow next" aria-label="Next offer" onclick="nextOffer()">›</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- Logo -->
+      <a href="#" class="brand-logo" aria-label="Dynamic Vacuums Home">
+        <img src="logo.webp" alt="Dynamic Vacuums Logo" class="brand-logo__img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <a href="#residential" class="nav-link">
+              Residential
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#central" class="nav-link">
+              Central Vacuums
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#commercial" class="nav-link">
+              Commercial
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#brands" class="nav-link">
+              Brands
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#parts" class="nav-link">
+              Parts & Accessories
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#repairs" class="nav-link">Service & Repairs</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Icons -->
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="cart-badge">0</span>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Full-Size Flagship Redesign - No AI Slop) -->
+    <section class="hero-section hero-section--fullscreen">
+      <div class="hero-bg-layer">
+        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=2200&q=90" alt="Person cleaning luxury hardwood flooring with high-performance vacuum" class="hero-bg-img">
+        <div class="hero-overlay-scrim"></div>
+      </div>
+
+      <div class="container hero-container-rel">
+        <div class="hero-card-content">
+          <h1 class="hero-title">Engineered for cleaner air &amp; longer-lasting floors.</h1>
+          
+          <p class="hero-subtext">Calgary’s premier vacuum specialists since 1994. Expertly curated residential canisters, cordless sticks, and central systems—backed by factory-certified warranty repairs and 100% genuine OEM parts.</p>
+
+          <div class="hero-cta-group">
+            <a href="#featured-solutions" class="btn btn-primary hero-btn">
+              <span>Explore Top Vacuums</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#repairs" class="btn btn-ghost hero-btn-ghost">
+              <span>Book Service or Repair</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Brand Logos Carousel (Hero) -->
+          <div class="hero-brands-wrap" aria-label="Featured vacuum manufacturers">
+            <div class="hero-brands-label">AUTHORIZED DEALER &amp; SERVICE FOR:</div>
+            <div class="hero-brands-marquee">
+              <div class="brands-marquee-track">
+                <!-- Set 1 -->
+                <span class="hero-brand-item"><img src="images/brands/dyson.svg" alt="Dyson" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/miele.svg" alt="Miele" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/sebo.png" alt="SEBO" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/duovac.png" alt="Duovac" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/nilfisk.svg" alt="Nilfisk" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/karcher.png" alt="Kärcher" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/cyclovac.png" alt="CycloVac" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/numatic.png" alt="Numatic / Henry" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/beam.png" alt="Beam Central Vacuums" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/drainvac.svg" alt="Drainvac" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/bissell.png" alt="Bissell" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/hoover.png" alt="Hoover" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/sanitaire.png" alt="Sanitaire" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/electrolux.png" alt="Electrolux" class="hero-brand-logo"></span>
+                <span class="hero-brand-item"><img src="images/brands/shark.png" alt="Shark" class="hero-brand-logo"></span>
+
+                <!-- Set 2 (Duplicate for seamless infinite scroll) -->
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/dyson.svg" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/miele.svg" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/sebo.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/duovac.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/nilfisk.svg" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/karcher.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/cyclovac.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/numatic.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/beam.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/drainvac.svg" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/bissell.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/hoover.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/sanitaire.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/electrolux.png" alt="" class="hero-brand-logo"></span>
+                <span class="hero-brand-item" aria-hidden="true"><img src="images/brands/shark.png" alt="" class="hero-brand-logo"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Glassmorphic Live Metric Badge -->
+        <div class="hero-floating-glass-card">
+          <div class="glass-card-content">
+            <div class="glass-card-header">
+              <strong>Sealed HEPA 13 Filtration</strong>
+              <span class="live-pill"><span class="pulse-dot"></span>99.97% Capture</span>
+            </div>
+            <span>Hospital-grade allergen containment for pet owners and sensitive respiratory relief</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop By Category & Cleaning Need (Clubbed Discovery Section) -->
+    <section class="section category-banners category-needs-clubbed" id="categories">
+      <div class="container">
+        <div class="category-clubbed__header">
+          <span class="eyebrow red-eyebrow">EXPLORE DYNAMIC VACUUMS</span>
+          <h2 class="section-title">Shop by Category &amp; Cleaning Need</h2>
+        </div>
+
+        <div class="category-grid">
+          <!-- Card 1 -->
+          <article class="category-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern clean residential living room" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Residential<br>Vacuums</h3>
+              <a href="#residential" class="category-card__btn" aria-label="View Residential Vacuums">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="category-card">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Central vacuum unit and modern utility space" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Central<br>Vacuums</h3>
+              <a href="#central" class="category-card__btn" aria-label="View Central Vacuums">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="category-card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Bright commercial office space" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Commercial<br>Vacuums</h3>
+              <a href="#commercial" class="category-card__btn" aria-label="View Commercial Vacuums">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Integrated Sub-Section: Shop By Cleaning Need -->
+        <div class="cleaning-needs-clubbed-row">
+          <div class="needs-grid">
+            <!-- Item 1 -->
+            <a href="https://dynamicvac.com/collections/carpet-extractors" class="need-card">
+              <div class="need-card__icon-wrap">
+                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=150&q=80" alt="Carpet Cleaning" class="need-card__thumb">
+              </div>
+              <span class="need-card__name">Carpet Cleaning</span>
+              <div class="need-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="https://dynamicvac.com/collections/hard-floor-cleaners" class="need-card">
+              <div class="need-card__icon-wrap">
+                <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=150&q=80" alt="Hard Floor Cleaning" class="need-card__thumb">
+              </div>
+              <span class="need-card__name">Hard Floor Cleaning</span>
+              <div class="need-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+
+            <!-- Item 3 -->
+            <a href="https://dynamicvac.com/collections/steam-cleaners" class="need-card">
+              <div class="need-card__icon-wrap">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=150&q=80" alt="Upholstery & Furniture" class="need-card__thumb">
+              </div>
+              <span class="need-card__name">Upholstery &amp; Furniture</span>
+              <div class="need-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+
+            <!-- Item 4 -->
+            <a href="https://dynamicvac.com/collections/hepa-vacuum-cleaners" class="need-card">
+              <div class="need-card__icon-wrap">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=150&q=80" alt="Pet Hair Removal" class="need-card__thumb">
+              </div>
+              <span class="need-card__name">Pet Hair Removal</span>
+              <div class="need-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+
+            <!-- Item 5 -->
+            <a href="https://dynamicvac.com/collections/air-purifiers" class="need-card">
+              <div class="need-card__icon-wrap">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=150&q=80" alt="Air Purification & Allergens" class="need-card__thumb">
+              </div>
+              <span class="need-card__name">Air &amp; Allergen Control</span>
+              <div class="need-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+
+            <!-- Item 6 -->
+            <a href="https://dynamicvac.com/collections/commercial-vacuums" class="need-card">
+              <div class="need-card__icon-wrap">
+                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=150&q=80" alt="Commercial Cleaning" class="need-card__thumb">
+              </div>
+              <span class="need-card__name">Commercial Cleaning</span>
+              <div class="need-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Favourites (Product Carousel / Tabs) -->
+    <section class="section favourites-section">
+      <div class="container">
+        <div class="favourites-header">
+          <h2 class="section-title">Our Favourites</h2>
+          <div class="favourites-controls">
+            <div class="tab-filters" role="tablist">
+              <button class="tab-btn active" role="tab" aria-selected="true" data-tab="residential">Residential</button>
+              <button class="tab-btn" role="tab" aria-selected="false" data-tab="central">Central</button>
+              <button class="tab-btn" role="tab" aria-selected="false" data-tab="commercial">Commercial</button>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow prev" aria-label="Previous product" id="fav-prev">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button class="carousel-arrow next" aria-label="Next product" id="fav-next">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-carousel" id="productCarousel">
+          <!-- Product Card 1 -->
+          <article class="product-card" data-category="residential" data-id="dyson-v8">
+            <div class="product-card__badges">
+              <span class="stock-badge">In Stock</span>
+            </div>
+            <button class="wishlist-btn" aria-label="Save Dyson V8 to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=400&q=80" alt="Dyson V8 Stick Vacuum" class="product-card__img">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-card__brand"><img src="images/brands/dyson.svg" alt="Dyson" class="product-card__brand-logo" title="Dyson"></span>
+                <div class="product-card__rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(48)</span>
+                </div>
+              </div>
+              <h3 class="product-card__title">Dyson V8 Stick Vacuum</h3>
+              <div class="product-card__price-row">
+                <div class="product-card__price">CAD $589.99</div>
+                <span class="shipping-tag">Free Shipping</span>
+              </div>
+              <button class="btn-add-to-cart" aria-label="Add Dyson V8 Stick Vacuum to cart" data-name="Dyson V8 Stick Vacuum" data-price="CAD $589.99">
+                <svg class="cart-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                <span class="btn-text">Add to Cart</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card" data-category="residential" data-id="miele-guard-s1">
+            <div class="product-card__badges">
+              <span class="stock-badge">In Stock</span>
+            </div>
+            <button class="wishlist-btn" aria-label="Save Miele Guard S1 to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=80" alt="Miele Guard S1 Canister Vacuum" class="product-card__img">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-card__brand"><img src="images/brands/miele.svg" alt="Miele" class="product-card__brand-logo" title="Miele"></span>
+                <div class="product-card__rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(64)</span>
+                </div>
+              </div>
+              <h3 class="product-card__title">Miele Guard S1 Canister Vacuum</h3>
+              <div class="product-card__price-row">
+                <div class="product-card__price">CAD $399.99</div>
+                <span class="shipping-tag">Free Shipping</span>
+              </div>
+              <button class="btn-add-to-cart" aria-label="Add Miele Guard S1 Canister Vacuum to cart" data-name="Miele Guard S1 Canister Vacuum" data-price="CAD $399.99">
+                <svg class="cart-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                <span class="btn-text">Add to Cart</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card" data-category="residential" data-id="dyson-v15">
+            <div class="product-card__badges">
+              <span class="stock-badge hot">Popular</span>
+            </div>
+            <button class="wishlist-btn" aria-label="Save Dyson V15 Detect to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80" alt="Dyson V15 Detect Vacuum" class="product-card__img">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-card__brand"><img src="images/brands/dyson.svg" alt="Dyson" class="product-card__brand-logo" title="Dyson"></span>
+                <div class="product-card__rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(112)</span>
+                </div>
+              </div>
+              <h3 class="product-card__title">Dyson V15 Detect</h3>
+              <div class="product-card__price-row">
+                <div class="product-card__price">CAD $994.99</div>
+                <span class="shipping-tag">Free Shipping</span>
+              </div>
+              <button class="btn-add-to-cart" aria-label="Add Dyson V15 Detect to cart" data-name="Dyson V15 Detect" data-price="CAD $994.99">
+                <svg class="cart-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                <span class="btn-text">Add to Cart</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card" data-category="residential" data-id="sebo-airbelt-e3">
+            <div class="product-card__badges">
+              <span class="stock-badge">In Stock</span>
+            </div>
+            <button class="wishlist-btn" aria-label="Save SEBO Airbelt E3 to wishlist">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=400&q=80" alt="SEBO Airbelt E3 Premium" class="product-card__img">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-card__brand"><img src="images/brands/sebo.png" alt="SEBO" class="product-card__brand-logo" title="SEBO"></span>
+                <div class="product-card__rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(39)</span>
+                </div>
+              </div>
+              <h3 class="product-card__title">SEBO Airbelt E3 Premium</h3>
+              <div class="product-card__price-row">
+                <div class="product-card__price">CAD $749.99</div>
+                <span class="shipping-tag">Free Shipping</span>
+              </div>
+              <button class="btn-add-to-cart" aria-label="Add SEBO Airbelt E3 Premium to cart" data-name="SEBO Airbelt E3 Premium" data-price="CAD $749.99">
+                <svg class="cart-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                <span class="btn-text">Add to Cart</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commercial & Janitorial Equipment CTA -->
+    <section class="banner-central banner-janitorial" id="janitorial" aria-label="Commercial and Janitorial Equipment">
+      <div class="banner-central__bg">
+        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1800&q=80" alt="Commercial janitorial equipment and facility cleaning solutions" class="banner-central__img">
+      </div>
+      <div class="container banner-central__content-wrap">
+        <div class="banner-central__box">
+          <span class="eyebrow">COMMERCIAL &amp; JANITORIAL DIVISION</span>
+          <h2 class="banner-central__title">Commercial Equipment &amp; Janitorial Supplies</h2>
+          <p class="banner-central__text">Heavy-duty commercial extractors, floor scrubbers, sanitizers, and wholesale janitorial cleaning supplies engineered for Calgary cleaning contractors, schools, healthcare, and property managers.</p>
+          <div class="banner-central__actions">
+            <a href="https://dynamicvac.com/collections/janitorial-equipment" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Explore Janitorial Supplies
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="tel:4032555212" class="btn btn-outline-dark">
+              Call Commercial Desk: (403) 255-5212
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cleaning Solutions (12 Category Grid) -->
+    <section class="section solutions-section" id="featured-solutions">
+      <div class="container">
+        <div class="solutions-header">
+          <div class="solutions-header__left">
+            <span class="eyebrow red-eyebrow">OUR PRODUCTS</span>
+            <h2 class="section-title">Featured Cleaning Solutions</h2>
+          </div>
+          <div class="solutions-header__divider" aria-hidden="true"></div>
+          <div class="solutions-header__right">
+            <p class="section-intro">A curated selection of high-performance vacuums,<br>cleaners, and air solutions for every space.</p>
+          </div>
+        </div>
+
+        <div class="solutions-grid">
+          <!-- Item 1 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/cordless-stick.png" alt="Cordless Stick Vacuum Cleaners">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Cordless Stick Vacuum Cleaners</h3>
+              <p class="solution-card__desc">Lightweight & versatile cleaning solutions.</p>
+              <a href="https://dynamicvac.com/collections/stick-vacuum-cleaners" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/canister-vacuums.png" alt="Canister Vacuum Cleaners">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Canister Vacuum Cleaners</h3>
+              <p class="solution-card__desc">Advanced cleaning solutions for every space.</p>
+              <a href="https://dynamicvac.com/collections/canister-vacuum-cleaners" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/upright-vacuums.png" alt="Upright Vacuum Cleaners">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Upright Vacuum Cleaners</h3>
+              <p class="solution-card__desc">Powerful solutions for every home.</p>
+              <a href="https://dynamicvac.com/collections/upright-vacuum-cleaners" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/commercial-backpack.png" alt="Commercial Backpack Vacuum Cleaners">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Commercial Backpack Vacuum Cleaners</h3>
+              <p class="solution-card__desc">Professional, high-efficiency cleaning.</p>
+              <a href="https://dynamicvac.com/collections/commercial-backpack-vacuum-cleaners" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/duovac-systems.png" alt="Duovac Systems">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Duovac Systems</h3>
+              <p class="solution-card__desc">Central vacuum solutions for homes.</p>
+              <a href="https://dynamicvac.com/collections/duovac" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/premium-miele.png" alt="Premium Miele Vacuums">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Premium Miele Vacuums</h3>
+              <p class="solution-card__desc">Canister, upright & stick vacuum cleaners.</p>
+              <a href="https://dynamicvac.com/collections/miele" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 7 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/commercial-vacuums.png" alt="Commercial Vacuums">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Commercial Vacuums</h3>
+              <p class="solution-card__desc">High-performance cleaning solutions for businesses.</p>
+              <a href="https://dynamicvac.com/collections/commercial-vacuums" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 8 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/auto-scrubbers.png" alt="Calgary Auto Scrubbers">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Calgary Auto Scrubbers</h3>
+              <p class="solution-card__desc">Powerful floor-cleaning solutions.</p>
+              <a href="https://dynamicvac.com/collections/auto-scrubbers" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 9 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/air-purification.png" alt="Air Purification">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Air Purification</h3>
+              <p class="solution-card__desc">Clean air solutions for a healthier home.</p>
+              <a href="https://dynamicvac.com/collections/air-purification" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 10 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/carpet-extractors.png" alt="Commercial Carpet Extractors & Shampooers">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Commercial Carpet Extractors & Shampooers</h3>
+              <p class="solution-card__desc">Deep cleaning solutions for carpets & upholstery.</p>
+              <a href="https://dynamicvac.com/collections/carpet-extractors-and-shampooers" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 11 -->
+          <article class="solution-card">
+            <div class="solution-card__thumb">
+              <img src="images/collections/central-packages.png" alt="Central Vacuum Packages">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Central Vacuum Packages</h3>
+              <p class="solution-card__desc">Effective solutions for every home in Calgary.</p>
+              <a href="https://dynamicvac.com/collections/central-vacuum-packages" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item 12 -->
+          <article class="solution-card highlight-sale">
+            <div class="solution-card__thumb">
+              <img src="images/collections/exclusive-sale.png" alt="Exclusive Sale">
+            </div>
+            <div class="solution-card__content">
+              <h3 class="solution-card__title">Exclusive Sale</h3>
+              <p class="solution-card__desc">Best deals on top products with price match guarantee.</p>
+              <a href="https://dynamicvac.com/collections/exclusive-sale-best-deals-on-top-products-with-price-match-guarantee" class="solution-card__link">
+                View Product
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Dynamic Vacuums? -->
+    <section class="section why-us-section" id="about-us">
+      <div class="container why-us-grid">
+        <!-- Video Player Column / Real Vimeo Founder Story -->
+        <div class="video-container founder-spotlight">
+          <div class="founder-card founder-card--video">
+            <div class="founder-video-wrap">
+              <iframe 
+                src="https://player.vimeo.com/video/909524809?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                allowfullscreen 
+                class="founder-vimeo-frame" 
+                title="Dynamic Vacuums - Calgary Vacuum Specialists Since 1994">
+              </iframe>
+            </div>
+            <div class="founder-card__footer">
+              <div class="founder-quote-banner">
+                <p>"Over 40,000 vacuums serviced in Calgary. We don't just sell machines in boxes—we test them, maintain them, and stock the exact OEM parts to keep them running for decades."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="why-us-content">
+          <span class="eyebrow red-eyebrow">WHY DYNAMIC VACUUMS?</span>
+          <h2 class="section-title">The Difference Between a Big-Box Store and a Real Vacuum Depot</h2>
+          <p class="why-us-lead">Big-box stores sell sealed cardboard boxes with zero spare parts, zero repair capability, and no real advice. At Dynamic Vacuums, every machine is tested on our showroom floor, backed by certified technicians, and matched directly to your home's flooring.</p>
+
+          <div class="features-2x2">
+            <!-- Feature 1 -->
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="feature-item__text">
+                <h3 class="feature-item__title">Showroom Floor Test-Drives</h3>
+                <p>Plug in and test suction, weight, and brush roll agitation on actual carpet, tile, and hardwood before deciding.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="feature-item__text">
+                <h3 class="feature-item__title">Authorized Factory Warranty Centre</h3>
+                <p>Direct warranty depot for Dyson, Miele, SEBO, and Duovac. Fast in-house resolution without shipping your unit away.</p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <div class="feature-item__text">
+                <h3 class="feature-item__title">10,000+ Genuine OEM Parts</h3>
+                <p>Motors, belts, filters, hoses, and replacement bags kept in Calgary stock for immediate counter pickup.</p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="feature-item__text">
+                <h3 class="feature-item__title">Free In-Store Diagnostic</h3>
+                <p>Bring your current vacuum in for a complimentary assessment. We check motor draw and suction with zero obligation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="testimonials-header testimonials-header--single-line">
+          <div class="testimonials-heading-wrap">
+            <span class="eyebrow">CUSTOMER TESTIMONIALS</span>
+            <h2 class="section-title testimonials-single-line-heading">Trusted by Homes &amp; Businesses Across Canada</h2>
+          </div>
+          <div class="google-rating-inline">
+            <div class="google-rating-inline__score">
+              <span class="google-g-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              </span>
+              <strong>4.9 / 5</strong>
+            </div>
+            <div class="google-rating-inline__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="google-rating-inline__count">Over <strong>500+ Google Reviews</strong></div>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <article class="testimonial-card">
+            <span class="quote-mark">“</span>
+            <p class="testimonial-card__text">Amazing service and a great selection of vacuums. The team helped me find the perfect model for my home. Highly recommend Dynamic Vacuums!</p>
+            <div class="testimonial-card__footer">
+              <div class="reviewer-meta">
+                <strong class="reviewer-name">Sarah M.</strong>
+                <span class="reviewer-loc">CALGARY, AB</span>
+              </div>
+              <div class="reviewer-stars">★★★★★</div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="testimonial-card">
+            <span class="quote-mark">“</span>
+            <p class="testimonial-card__text">We've purchased both residential and commercial equipment here. The product knowledge, support and after-sales service are excellent.</p>
+            <div class="testimonial-card__footer">
+              <div class="reviewer-meta">
+                <strong class="reviewer-name">James T.</strong>
+                <span class="reviewer-loc">EDMONTON, AB</span>
+              </div>
+              <div class="reviewer-stars">★★★★★</div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="testimonial-card">
+            <span class="quote-mark">“</span>
+            <p class="testimonial-card__text">Professional, honest and reliable. They repaired my vacuum quickly and it works like new. It's great to have a trusted local expert for service and repairs.</p>
+            <div class="testimonial-card__footer">
+              <div class="reviewer-meta">
+                <strong class="reviewer-name">Linda K.</strong>
+                <span class="reviewer-loc">CALGARY, AB</span>
+              </div>
+              <div class="reviewer-stars">★★★★★</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonials-cta">
+          <a href="#" class="btn btn-outline-dark">
+            Read More Reviews on Google
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Cleaning Results (Surface Performance Showcase) -->
+    <section class="section results-section" id="results">
+      <div class="container">
+        <div class="results-header">
+          <div>
+            <span class="eyebrow red-eyebrow">SURFACE PROVEN PERFORMANCE</span>
+            <h2 class="section-title">Real Cleaning Results Across Every Flooring Type</h2>
+          </div>
+          <p class="section-intro">Specialized brush agitation, certified sealed HEPA filtration, and industrial extractors engineered to preserve surfaces and eliminate deeply embedded soil.</p>
+        </div>
+
+        <div class="results-showcase-grid">
+          <!-- Card 1: High Pile Carpet -->
+          <article class="result-showcase-card">
+            <div class="result-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80" alt="Deep carpet vacuuming and fiber restoration" class="result-card__img" loading="lazy">
+              <span class="result-card__pill">HIGH-PILE CARPET &amp; RUGS</span>
+            </div>
+            <div class="result-card__body">
+              <div class="result-card__tech">
+                <span class="tech-label">EQUIPMENT USED:</span>
+                <strong>SEBO ET-1 / Miele Electrobrush</strong>
+              </div>
+              <h3 class="result-card__title">Deep Fiber Pet Hair &amp; Dander Lift</h3>
+              <p class="result-card__desc">Motorized geared drive vibrates embedded pet hair and abrasive silica grit from deep within carpet roots without stalling.</p>
+              <ul class="result-card__metrics">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 100% Embedded Dander Removed</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Restores Crushed Carpet Pile</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 2: Hardwood -->
+          <article class="result-showcase-card">
+            <div class="result-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Pristine clean hardwood floor" class="result-card__img" loading="lazy">
+              <span class="result-card__pill">DELICATE HARDWOOD &amp; TILE</span>
+            </div>
+            <div class="result-card__body">
+              <div class="result-card__tech">
+                <span class="tech-label">EQUIPMENT USED:</span>
+                <strong>Natural Horsehair Parquet Twister</strong>
+              </div>
+              <h3 class="result-card__title">Zero-Scratch Micro-Dust Extraction</h3>
+              <p class="result-card__desc">Natural bristles glide over sealed hardwood, slate, and marble, capturing fine allergen dust instead of scattering it into the air.</p>
+              <ul class="result-card__metrics">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero Abrasive Surface Scratches</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tight Baseboard &amp; Grout Line Seal</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 3: Upholstery & Fabrics -->
+          <article class="result-showcase-card">
+            <div class="result-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Spotless deep cleaned sofa upholstery" class="result-card__img" loading="lazy">
+              <span class="result-card__pill">UPHOLSTERY &amp; INTERIORS</span>
+            </div>
+            <div class="result-card__body">
+              <div class="result-card__tech">
+                <span class="tech-label">EQUIPMENT USED:</span>
+                <strong>Commercial Heated Spot Extractor</strong>
+              </div>
+              <h3 class="result-card__title">Deep Fabric Reconditioning &amp; Odor Removal</h3>
+              <p class="result-card__desc">High-pressure injection and high-vacuum recovery pull deep beverage spills, pet stains, and allergens out of furniture and vehicle seats.</p>
+              <ul class="result-card__metrics">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Neutralizes Trapped Odors at the Core</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rapid 2-Hour Fiber Dry Time</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="results-cta">
+          <a href="#featured-solutions" class="btn btn-primary">
+            Explore Matching Cleaning Machines
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#repairs" class="btn btn-outline-dark">
+            Book In-Store Equipment Test-Drive
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authorized Repairs & Service ("Don’t Replace It. Repair It!") -->
+    <section class="section repair-section" id="repairs">
+      <div class="container repair-grid">
+        <div class="repair-content">
+          <span class="eyebrow">CERTIFIED WARRANTY &amp; CALGARY SERVICE CENTRE</span>
+          <h2 class="repair-title">Don’t Replace It<br><span class="highlight-red">Repair It!</span></h2>
+          <p class="repair-desc">Dynamic Vacuums is Calgary's trusted repair choice with over 30+ years of family-owned service. Our master technicians restore residential, commercial, and central vacuum systems using genuine OEM parts. Bring your machine into our Calgary showroom for a 100% free upfront estimate before committing to any work.</p>
+
+          <div class="repair-issues-strip">
+            <span class="issues-label">COMMON FIXES:</span>
+            <span class="issue-pill">Loss of Suction</span>
+            <span class="issue-pill">Belt &amp; Roller Jams</span>
+            <span class="issue-pill">Motor Replacement</span>
+            <span class="issue-pill">Cord &amp; Switch Faults</span>
+            <span class="issue-pill">Clogged Central Hoses</span>
+          </div>
+
+          <div class="repair-cta-group">
+            <a href="https://dynamicvac.com/pages/vacuum-repairs" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Book a Repair &amp; Get Free Estimate
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://dynamicvac.com/pages/vacuum-repairs" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+              Explore Full Repair Details
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="tel:4032555212" class="repair-call-link" aria-label="Call Calgary Repair Desk">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call Repair Desk: <strong>(403) 255-5212</strong></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="repair-visual">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" alt="Master certified technician repairing vacuum motor and filters in Calgary shop" class="repair-img" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Expert Advice & Buying Guides -->
+    <section class="section guides-section">
+      <div class="container">
+        <div class="guides-header">
+          <div>
+            <span class="eyebrow">EXPERT ADVICE & BUYING GUIDES</span>
+            <h2 class="section-title">Helpful Guides for a Cleaner, Healthier Home</h2>
+          </div>
+          <p class="section-intro">Make informed decisions with practical tips, product comparisons and expert recommendations from the Dynamic Vacuums team.</p>
+        </div>
+
+        <div class="guides-grid">
+          <!-- Guide 1 -->
+          <article class="guide-card">
+            <div class="guide-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=500&q=80" alt="Modern vacuum cleaner in living room">
+            </div>
+            <div class="guide-card__body">
+              <span class="guide-card__tag">BUYING GUIDE</span>
+              <h3 class="guide-card__title">How to Choose the Right Vacuum Cleaner</h3>
+              <a href="#" class="guide-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Guide 2 -->
+          <article class="guide-card">
+            <div class="guide-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=500&q=80" alt="Comparison between canister and upright vacuums">
+            </div>
+            <div class="guide-card__body">
+              <span class="guide-card__tag">COMPARISON</span>
+              <h3 class="guide-card__title">Canister vs. Upright Vacuums: Which Is Better?</h3>
+              <a href="#" class="guide-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Guide 3 -->
+          <article class="guide-card">
+            <div class="guide-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80" alt="Dog sitting on living room carpet">
+            </div>
+            <div class="guide-card__body">
+              <span class="guide-card__tag">SOLUTIONS</span>
+              <h3 class="guide-card__title">Best Vacuums for Pet Hair & Allergens</h3>
+              <a href="#" class="guide-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Guide 4 -->
+          <article class="guide-card">
+            <div class="guide-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80" alt="Technician inspecting vacuum motor parts">
+            </div>
+            <div class="guide-card__body">
+              <span class="guide-card__tag">MAINTENANCE</span>
+              <h3 class="guide-card__title">When Should You Repair or Replace Your Vacuum?</h3>
+              <a href="#" class="guide-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="guides-cta">
+          <a href="#" class="btn btn-primary pill-btn">
+            Explore All Guides
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Janitorial & Commercial Cleaning Supplies Calgary (Image-Based CTA Section) -->
+    <section class="section janitorial-section" id="janitorial">
+      <div class="container">
+        <div class="janitorial-header">
+          <div class="janitorial-header__text">
+            <span class="eyebrow red-eyebrow">COMMERCIAL CLEANING SOLUTIONS</span>
+            <h2 class="section-title">Calgary Janitorial Supplies &amp; Equipment for Every Facility</h2>
+            <p class="section-intro">Keep your facility clean, safe, and running efficiently. Dynamic Vacuums is Calgary's trusted source for heavy-duty commercial floor scrubbers, carpet extractors, industrial chemicals, mops, carts, and restroom dispensers.</p>
+          </div>
+          <div class="janitorial-header__actions">
+            <a href="https://dynamicvac.com/pages/janitorial-cleaning-supplies-calgary" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Request Commercial Pricing
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="tel:4032626026" class="btn btn-outline-dark">
+              Call Commercial Desk: (403) 262-6026
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Image-Based Commercial Category Cards (No Icons) -->
+        <div class="janitorial-photo-grid">
+          <!-- Card 1 -->
+          <article class="janitorial-photo-card">
+            <div class="janitorial-photo-card__thumb">
+              <img src="images/collections/auto-scrubbers.png" alt="Auto Floor Scrubbers & Machines" class="janitorial-photo-card__img" loading="lazy">
+            </div>
+            <div class="janitorial-photo-card__content">
+              <h3 class="janitorial-photo-card__title">Auto Scrubbers &amp; Floor Machines</h3>
+              <p class="janitorial-photo-card__desc">Walk-behind auto scrubbers, rotary floor polishers, and high-traction extractors with compact 15" to 28" decks.</p>
+              <a href="https://dynamicvac.com/collections/auto-scrubbers" class="janitorial-photo-card__btn">
+                Browse Floor Machines
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="janitorial-photo-card">
+            <div class="janitorial-photo-card__thumb">
+              <img src="images/collections/carpet-extractors.png" alt="Commercial Carpet Extractors" class="janitorial-photo-card__img" loading="lazy">
+            </div>
+            <div class="janitorial-photo-card__content">
+              <h3 class="janitorial-photo-card__title">Commercial Carpet Extractors</h3>
+              <p class="janitorial-photo-card__desc">Heated industrial extractors with high-pressure water injection and rapid vacuum recovery for high-traffic facilities.</p>
+              <a href="https://dynamicvac.com/collections/carpet-extractors" class="janitorial-photo-card__btn">
+                Browse Carpet Extractors
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="janitorial-photo-card">
+            <div class="janitorial-photo-card__thumb">
+              <img src="images/collections/commercial-backpack.png" alt="Commercial Backpack & Upright Vacuums" class="janitorial-photo-card__img" loading="lazy">
+            </div>
+            <div class="janitorial-photo-card__content">
+              <h3 class="janitorial-photo-card__title">Commercial &amp; Backpack Vacuums</h3>
+              <p class="janitorial-photo-card__desc">Ergonomic lightweight backpack vacs and commercial uprights built for non-stop daily cleaning in offices and hotels.</p>
+              <a href="https://dynamicvac.com/collections/commercial-vacuums" class="janitorial-photo-card__btn">
+                Browse Commercial Vacuums
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="janitorial-photo-card">
+            <div class="janitorial-photo-card__thumb">
+              <img src="images/janitorial-supplies.png" alt="Commercial Cleaning Chemicals & Facility Supplies" class="janitorial-photo-card__img" loading="lazy">
+            </div>
+            <div class="janitorial-photo-card__content">
+              <h3 class="janitorial-photo-card__title">Facility Supplies &amp; Bulk Chemicals</h3>
+              <p class="janitorial-photo-card__desc">Eco-safe floor cleaners, hospital-grade disinfectants, custodial carts, microfiber mops, and restroom dispensers.</p>
+              <a href="https://dynamicvac.com/pages/janitorial-cleaning-supplies-calgary" class="janitorial-photo-card__btn">
+                Browse Facility Supplies
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- High-Impact Image-Based Commercial CTA Banner -->
+        <div class="janitorial-hero-cta">
+          <div class="janitorial-hero-cta__bg">
+            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1800&q=80" alt="Commercial facility maintenance" class="janitorial-hero-cta__img" loading="lazy">
+          </div>
+          <div class="janitorial-hero-cta__content">
+            <span class="eyebrow" style="color: #ffcdd2;">CALGARY COMMERCIAL PARTNER</span>
+            <h3 class="janitorial-hero-cta__title">Equip Your Facility with Preferred Commercial Volume Pricing</h3>
+            <p class="janitorial-hero-cta__desc">From individual machinery replacements to full-facility turnkey custodial packages, our Calgary team provides on-site demos, fleet maintenance, and scheduled wholesale supply delivery.</p>
+            <div class="janitorial-hero-cta__actions">
+              <a href="https://dynamicvac.com/pages/janitorial-cleaning-supplies-calgary" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                Request Commercial Pricing
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="tel:4032626026" class="btn btn-outline-white">
+                Call Commercial Specialist: (403) 262-6026
+              </a>
+            </div>
+            <div class="janitorial-hero-cta__tags">
+              <span>✓ On-Site Calgary Demos</span>
+              <span>✓ Direct Factory Warranty</span>
+              <span>✓ Scheduled Restock Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Industries Served Bar -->
+        <div class="janitorial-industries">
+          <span class="industries-title">Trusted By Calgary Facilities &amp; Contractors:</span>
+          <div class="industries-chips">
+            <span class="industry-chip">Offices &amp; Corporate</span>
+            <span class="industry-chip">Warehouses &amp; Logistics</span>
+            <span class="industry-chip">Medical &amp; Dental Clinics</span>
+            <span class="industry-chip">Retail &amp; Shopping Malls</span>
+            <span class="industry-chip">Schools &amp; Universities</span>
+            <span class="industry-chip">Hotels &amp; Restaurants</span>
+            <span class="industry-chip">Janitorial Contractors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Store Customer Support & Contact Section -->
+    <section class="section store-contact-section" id="contact">
+      <div class="container">
+        <!-- Main Contact & Enhanced Form Card (From Image 2: Vacuuming Just Got Easier) -->
+        <div class="contact-main-card" id="contact-form">
+          <div class="contact-main-grid">
+            <!-- Left: Contact Details -->
+            <div class="contact-info-col">
+              <div>
+                <span class="contact-eyebrow">Get in touch</span>
+                <h3 class="contact-headline">Vacuuming Just Got Easier.</h3>
+
+                <div class="contact-channels-list">
+                  <div class="contact-channel-item">
+                    <div class="channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="channel-details">
+                      <span class="channel-label">Showroom &amp; Order Pickup</span>
+                      <strong class="channel-text">165 – 10233 Elbow Dr S.W. Calgary, AB T2W 1E8</strong>
+                    </div>
+                  </div>
+
+                  <div class="contact-channel-item">
+                    <div class="channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div class="channel-details">
+                      <span class="channel-label">Online Support Email</span>
+                      <a href="mailto:info@dynamicvac.com" class="channel-link">info@dynamicvac.com</a>
+                    </div>
+                  </div>
+
+                  <div class="contact-channel-item">
+                    <div class="channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div class="channel-details">
+                      <span class="channel-label">Calgary Local Desk</span>
+                      <a href="tel:4032555212" class="channel-link">403-255-5212</a>
+                    </div>
+                  </div>
+
+                  <div class="contact-channel-item">
+                    <div class="channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div class="channel-details">
+                      <span class="channel-label">Toll-Free Across Canada</span>
+                      <a href="tel:18444315333" class="channel-link">+1-844-431-5333</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-channels-wrap">
+                <span class="social-channels-label">Follow us on social media</span>
+                <div class="social-icon-links">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-media-link" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  </a>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-media-link" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  </a>
+                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-media-link" aria-label="X (Twitter)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Enhanced Form -->
+            <div class="contact-form-col">
+              <form class="online-store-form" id="onlineSupportForm" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to our customer care team. We will respond within 2-4 business hours.');">
+                <div class="form-row-2">
+                  <div class="form-field">
+                    <label for="cName">Name</label>
+                    <input type="text" id="cName" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="cEmail">Email *</label>
+                    <input type="email" id="cEmail" placeholder="name@example.com" required>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-field">
+                    <label for="cPhone">Phone number</label>
+                    <input type="tel" id="cPhone" placeholder="(403) 000-0000">
+                  </div>
+                  <div class="form-field">
+                    <label for="cTopic">Inquiry Topic</label>
+                    <select id="cTopic">
+                      <option value="Online Order Status">Online Order Status &amp; Tracking</option>
+                      <option value="Product Advice">Vacuum Selection &amp; Flooring Fit</option>
+                      <option value="Warranty / Return">Warranty Support &amp; Returns</option>
+                      <option value="Parts Matching">OEM Bags, Filters &amp; Parts Matching</option>
+                      <option value="Commercial Inquiry">Commercial &amp; Bulk Purchasing</option>
+                      <option value="Other">General Customer Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="cComment">Comment</label>
+                  <textarea id="cComment" rows="4" placeholder="How can our specialists assist your order today?" required></textarea>
+                </div>
+
+                <div class="form-actions-bar">
+                  <button type="submit" class="btn btn-primary contact-send-btn">
+                    <span>Send</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </button>
+                  <span class="form-security-note">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    256-Bit SSL Encrypted &amp; Fast Response
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Hours Banner (From Image 1: Need some help?) -->
+        <div class="support-hours-banner">
+          <div class="support-hours-banner__left">
+            <span class="eyebrow red-eyebrow">CUSTOMER CARE &amp; ORDER DESK</span>
+            <h2 class="support-banner__title">Need some help?</h2>
+            <p class="support-banner__desc">Our team is always ready to assist you anytime, even after hours! Whether you need help choosing the right vacuum for your home, checking stock, or tracking an active online shipment, our specialists are ready.</p>
+            <div class="support-banner__cta">
+              <a href="#contact-form" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+          <div class="support-hours-banner__right">
+            <div class="hours-card">
+              <div class="hours-card__title">Support &amp; Store Hours</div>
+              <ul class="hours-card__list">
+                <li>
+                  <span class="hours-day">Monday to Friday:</span>
+                  <span class="hours-time">9 am – 6 pm</span>
+                </li>
+                <li>
+                  <span class="hours-day">Saturday:</span>
+                  <span class="hours-time">10 am – 5 pm</span>
+                </li>
+                <li>
+                  <span class="hours-day">Sunday:</span>
+                  <span class="hours-time">Closed</span>
+                </li>
+              </ul>
+              <div class="hours-card__badge">
+                <span class="online-indicator"></span> 24/7 Online Store Open Across Canada
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Store FAQs (Frequently Asked Questions) -->
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-intro">
+          <span class="eyebrow red-eyebrow">HELP &amp; ORDERING FAQS</span>
+          <h2 class="section-title">Frequently Asked <span class="highlight-red">Questions</span></h2>
+          <p class="faq-subtext">Everything you need to know about purchasing online, Canada-wide shipping, factory warranties, and finding the right vacuum.</p>
+          <div class="faq-support-box">
+            <strong>Can't find what you're looking for?</strong>
+            <p>Our Canadian product specialists are on hand to assist with orders and machine matching.</p>
+            <a href="tel:18444315333" class="faq-hotline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Toll-Free Support: <strong>+1-844-431-5333</strong></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- FAQ 1 (Open by default) -->
+          <details class="faq-item" open name="faq-group">
+            <summary class="faq-question">
+              <span>How does shipping work across Canada, and how do I get Free Shipping?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>We ship nationwide to all Canadian provinces and territories using secure, tracked shipping via Canada Post and express couriers. <strong>All orders over $75 qualify for 100% Free Shipping.</strong> In-stock orders placed before 2:00 PM MST are dispatched within 24 hours with email tracking.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>What is your return policy for online orders?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>We want you to be thrilled with your machine. We offer a <strong>30-day hassle-free return policy</strong> on brand-new, unused vacuums in original manufacturer packaging. If you need setup help or technical guidance, our certified team is only a phone call away.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>Are all products authentic and covered by full Canadian factory warranties?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. Dynamic Vacuums is an <strong>Authorized Canadian Dealer &amp; Warranty Depot</strong> for Dyson, Miele, SEBO, Duovac, Beam, Nilfisk, and Sanitaire. Every vacuum you order online is 100% brand-new, factory-sealed, and eligible for complete Canadian manufacturer warranty coverage.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>How does the 100% Price Match Guarantee work online?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>If you find an identical, in-stock item advertised at a lower price by any authorized Canadian dealer, we will match it on the spot. Simply send us the product link or call our toll-free line before or at checkout.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>Can I buy online and pick up at your Calgary showroom?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes! During online checkout, choose <strong>"Free In-Store Pickup"</strong>. We will prepare and inspect your vacuum so it is ready for same-day or next-day collection at our Calgary showroom: <strong>165 – 10233 Elbow Dr S.W.</strong></p>
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>How do I find the exact replacement bags, filters, or parts for my model?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>We stock one of Western Canada's largest inventories of genuine OEM filters, HEPA bags, belts, and powerhead assemblies. You can search by your machine's model number online or send a photo of your vacuum's serial plate to <strong>info@dynamicvac.com</strong> for instant matching.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 7 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>What secure payment methods are accepted on your store?</span>
+              <span class="faq-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Our online checkout supports Visa, MasterCard, American Express, PayPal, and Apple Pay with bank-grade 256-bit SSL encryption to protect your transaction.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimal Customer Guarantees (No AI Slop) -->
+    <section class="minimal-guarantees" aria-label="Customer Guarantees and Direct Value">
+      <div class="container">
+        <div class="minimal-guarantees__grid">
+          <!-- Item 1 -->
+          <div class="minimal-guarantee-item">
+            <div class="minimal-guarantee-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="minimal-guarantee-item__content">
+              <h3 class="minimal-guarantee-item__title">Price Match Guarantee</h3>
+              <p class="minimal-guarantee-item__desc">Found an authorized Canadian dealer with a lower price? We'll match it on the spot.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="minimal-guarantee-item">
+            <div class="minimal-guarantee-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="minimal-guarantee-item__content">
+              <h3 class="minimal-guarantee-item__title">Canada-Wide Fast Shipping</h3>
+              <p class="minimal-guarantee-item__desc">Secure tracking from coast to coast. Free shipping on all orders over $75.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="minimal-guarantee-item">
+            <div class="minimal-guarantee-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="minimal-guarantee-item__content">
+              <h3 class="minimal-guarantee-item__title">Authorized Warranty Repairs</h3>
+              <p class="minimal-guarantee-item__desc">Certified Dyson, Miele &amp; SEBO warranty repair centre with genuine OEM components.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="minimal-guarantee-item">
+            <div class="minimal-guarantee-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="minimal-guarantee-item__content">
+              <h3 class="minimal-guarantee-item__title">Calgary Showroom &amp; Advice</h3>
+              <p class="minimal-guarantee-item__desc">Test-drive any model before buying. Meet real specialists with 30+ years of expertise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#" class="brand-logo footer-logo" aria-label="Dynamic Vacuums Home">
+            <img src="logo-light.webp" alt="Dynamic Vacuums Logo" class="brand-logo__img footer-logo__img">
+          </a>
+          <p class="footer-about">Your trusted vacuum specialists in Calgary. Quality products, expert advice, repairs and complete cleaning solutions for homes and businesses.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#3B0A0C"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#">All Purifiers</a></li>
+            <li><a href="#">Central Vacuums</a></li>
+            <li><a href="#">Hepa Vacuum Cleaners</a></li>
+            <li><a href="#">Vacuums</a></li>
+            <li><a href="#">Commercial Vacuums</a></li>
+            <li><a href="#janitorial">Janitorial Supplies Calgary</a></li>
+            <li><a href="#">Carpet Extractors and Shampooers</a></li>
+            <li><a href="#">Hard Floor Cleaners / Steam Cleaners</a></li>
+            <li><a href="#">Parts and Accessories</a></li>
+            <li><a href="#">Cleaning Products</a></li>
+            <li><a href="#">Hard Floor Cleaners / Room Cleaners</a></li>
+            <li><a href="#">Retractable Hose System</a></li>
+            <li><a href="#">Installation Material</a></li>
+            <li><a href="#" class="sale-link">Sale</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Price Match Guarantee</a></li>
+            <li><a href="#">Store Hours</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Repairs</a></li>
+            <li><a href="#">Commercial and Janitorial Equipment Inquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Visit Our Store & Contact -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-heading">Calgary Store &amp; Support</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <div class="footer-contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span>165 – 10233 Elbow Dr S.W.,<br>Calgary, AB T2W 1E8</span>
+            </li>
+            <li>
+              <div class="footer-contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="phone-group">
+                <a href="tel:4032555212">403-255-5212</a>
+                <a href="tel:18444315333">+1-844-431-5333</a>
+              </div>
+            </li>
+            <li>
+              <div class="footer-contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <a href="mailto:info@dynamicvac.com">info@dynamicvac.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter Bar -->
+      <div class="footer-newsletter-bar">
+        <div class="newsletter-caption">
+          <span>Sign up for exclusive offers and seasonal savings!</span>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Dynamic Vacuums newsletter!');">
+          <input type="email" placeholder="Enter your email" required aria-label="Email address for newsletter">
+          <button type="submit" class="newsletter-submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </form>
+        <div class="payment-badges" aria-label="Accepted payment methods">
+          <span class="pay-chip">VISA</span>
+          <span class="pay-chip">MC</span>
+          <span class="pay-chip">AMEX</span>
+          <span class="pay-chip">PAYPAL</span>
+          <span class="pay-chip">APPLE PAY</span>
+        </div>
+      </div>
+
+      <!-- Bottom Legal Row -->
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Dynamic Vacuums. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for CRO & CX -->
+  <aside class="cart-toast" id="cartToast" role="status" aria-live="polite" aria-atomic="true">
+    <div class="cart-toast__icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="cart-toast__content">
+      <strong class="cart-toast__title">Added to Cart</strong>
+      <span class="cart-toast__name" id="cartToastName">Dyson V8 Stick Vacuum</span>
+    </div>
+    <button class="cart-toast__close" aria-label="Dismiss notification" onclick="document.getElementById('cartToast').classList.remove('show')">✕</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
