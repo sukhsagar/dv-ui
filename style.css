@@ -4831,24 +4831,30 @@ ul, ol {
 
   /* Expert Advice & Buying Guides Grid (100% width per guide) */
   .guides-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 20px;
-    width: 100%;
+    width: 100% !important;
   }
 
   .guide-card {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
   }
 
   /* Commercial Cleaning Solutions Icon/Photo Cards (100% width per card) */
-  .janitorial-photo-grid {
-    grid-template-columns: 1fr;
+  .janitorial-photo-grid,
+  .janitorial-grid {
+    grid-template-columns: 1fr !important;
     gap: 20px;
-    width: 100%;
+    width: 100% !important;
   }
 
-  .janitorial-photo-card {
-    width: 100%;
+  .janitorial-photo-card,
+  .janitorial-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
   }
 
   /* Trusted By Calgary Facilities & Contractors: Pill Content Font Size */
