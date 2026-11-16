@@ -4775,6 +4775,88 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
+  /* Commercial Equipment & Janitorial Supplies CTA Banner */
+  .banner-central,
+  .banner-central.banner-janitorial {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .banner-central__content-wrap {
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .banner-central__box {
+    width: 100%;
+    max-width: 100%;
+    padding: 34px 22px;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+  }
+
+  .banner-central__title {
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+
+  .banner-central__text {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .banner-central__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .banner-central__actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+    min-height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Expert Advice & Buying Guides Grid (100% width per guide) */
+  .guides-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .guide-card {
+    width: 100%;
+  }
+
+  /* Commercial Cleaning Solutions Icon/Photo Cards (100% width per card) */
+  .janitorial-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .janitorial-photo-card {
+    width: 100%;
+  }
+
+  /* Trusted By Calgary Facilities & Contractors: Pill Content Font Size */
+  .industry-chip {
+    font-size: calc(0.76rem - 1.2px);
+    padding: 3px 10px;
+  }
+
   .janitorial-hero-cta {
     min-height: auto;
     border-radius: var(--radius-lg);
@@ -4834,6 +4916,25 @@ ul, ol {
 }
 
 @media (max-width: 420px) {
+  .banner-central,
+  .banner-central.banner-janitorial {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .banner-central__box {
+    padding: 26px 16px;
+  }
+
+  .banner-central__title {
+    font-size: 1.35rem;
+  }
+
+  .industry-chip {
+    font-size: calc(0.76rem - 1.2px);
+    padding: 2.5px 8px;
+  }
+
   .janitorial-hero-cta__content {
     padding: 24px 16px;
   }
