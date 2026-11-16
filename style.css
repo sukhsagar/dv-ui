@@ -605,6 +605,8 @@ ul, ol {
   position: relative;
   z-index: 2;
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -612,7 +614,10 @@ ul, ol {
 }
 
 .hero-card-content {
+  width: 100%;
   max-width: 660px;
+  min-width: 0;
+  box-sizing: border-box;
   color: var(--color-white);
 }
 
@@ -719,6 +724,13 @@ ul, ol {
   width: 100%;
 }
 
+.hero-brands-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
 .hero-brands-label {
   font-size: 0.72rem;
   font-weight: 800;
@@ -732,6 +744,7 @@ ul, ol {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
 }
@@ -3842,7 +3855,21 @@ ul, ol {
   /* Hero Section */
   .hero-section--fullscreen {
     min-height: auto;
-    padding: 44px 0 52px;
+    padding: 40px 0 48px;
+  }
+
+  .hero-container-rel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-card-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .hero-chip-badge {
@@ -3851,33 +3878,46 @@ ul, ol {
   }
 
   .hero-title {
-    font-size: 1.95rem;
+    font-size: clamp(1.75rem, 6.2vw, 2.1rem);
     line-height: 1.15;
     letter-spacing: -0.02em;
     margin-bottom: 14px;
+    word-break: break-word;
+    hyphens: auto;
   }
 
+  .hero-subtext,
   .hero-desc {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     line-height: 1.55;
     margin-bottom: 22px;
+    max-width: 100%;
   }
 
   .hero-cta-group {
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
+    max-width: 100%;
     gap: 12px;
   }
 
   .hero-cta-group .btn {
     width: 100%;
+    max-width: 100%;
     justify-content: center;
     padding: 13px 20px;
     font-size: 0.92rem;
+    min-height: 48px;
+    box-sizing: border-box;
   }
 
   .hero-brands-wrap {
     margin-top: 26px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .hero-brands-label {
@@ -4109,17 +4149,40 @@ ul, ol {
   }
 
   .support-hours-banner {
-    padding: 22px 18px;
-    gap: 18px;
+    padding: 24px 18px;
+    gap: 20px;
   }
 
   .support-banner__title {
     font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   .support-banner__desc {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .support-banner__cta {
+    width: 100%;
+  }
+
+  .support-banner__cta .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 20px;
+    font-size: 0.94rem;
+  }
+
+  .guides-cta .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 20px;
   }
 
   .hours-card {
@@ -4711,6 +4774,52 @@ ul, ol {
   }
 }
 
+@media (max-width: 768px) {
+  .janitorial-hero-cta {
+    min-height: auto;
+    border-radius: var(--radius-lg);
+  }
+
+  .janitorial-hero-cta__content {
+    padding: 32px 20px;
+    max-width: 100%;
+  }
+
+  .janitorial-hero-cta__title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .janitorial-hero-cta__desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .janitorial-hero-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .janitorial-hero-cta__actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    min-height: 48px;
+    text-align: center;
+  }
+
+  .janitorial-hero-cta__tags {
+    gap: 10px 14px;
+    font-size: 0.76rem;
+  }
+}
+
 @media (max-width: 600px) {
   .janitorial-grid {
     grid-template-columns: 1fr;
@@ -4721,6 +4830,20 @@ ul, ol {
   .janitorial-industries {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .janitorial-hero-cta__content {
+    padding: 24px 16px;
+  }
+
+  .janitorial-hero-cta__title {
+    font-size: 1.3rem;
+  }
+
+  .janitorial-hero-cta__desc {
+    font-size: 0.86rem;
   }
 }
 
